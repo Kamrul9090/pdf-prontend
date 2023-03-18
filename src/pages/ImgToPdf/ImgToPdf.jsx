@@ -26,18 +26,17 @@ const ImgToPdf = () => {
     }
 
     return (
-        <div>
-            <form action="">
-                <div className='flex justify-around'>
-                    <label for="images" class="drop-container">
-                        <span class="drop-title">Drop files here</span>
-                        or
-                        <input className='' id='images' type="file" name='img' onChange={handleImg} />
-                    </label>
-                    <img id='showImg' src={img} alt="" srcset="" className='w-1/4 h-80' />
+        <div className='text-center py-10'>
+            <h1 className='text-3xl font-semibold'>Convert Image to PDF</h1>
+            <div className='flex my-20 justify-around'>
+                <label className="img-container">
+                    <input class="" id='inputFile' type="file" name='img' onChange={handleImg} multiple />
+                </label>
+                <div className={`border-2 rounded-lg`}>
+                    <img id='showImg' src={img} alt="" srcset="" className={`w-48 mx-auto rounded-lg`} />
                 </div>
-                <button className='btn' onClick={pdfDown}>Img to PDF</button>
-            </form>
+            </div>
+            <button className="px-4 py-1 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800" onClick={pdfDown}>Image to PDF</button>
         </div>
     );
 };
