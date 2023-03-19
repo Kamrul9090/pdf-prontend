@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
     const [loader, setLoader] = useState(true);
     const [theme, setTheme] = useState(false);
 
-
+    console.log(theme);
     useEffect(() => {
         const rootElement = window.document.documentElement;
         if (theme) {
